@@ -69,7 +69,6 @@ sys     0m17.362s
 real    0m4.296s
 user    0m4.590s
 sys     0m0.865s
-node ➜ /workspaces/ts-unit-test-loadtesting/mocha-tdd (master ✗) $ 
 
 > time npm test
 
@@ -78,8 +77,8 @@ node ➜ /workspaces/ts-unit-test-loadtesting/mocha-tdd (master ✗) $
 real    0m4.599s
 user    0m4.820s
 sys     0m1.039s
-node ➜ /workspaces/ts-unit-test-loadtesting/mocha-tdd (master ✗) $ 
 
+>
 ```
 
 ## Testing Environment
