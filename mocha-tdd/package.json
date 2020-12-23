@@ -1,0 +1,55 @@
+{
+  "name": "tsflow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/chai": "^4.2.14",
+    "@types/mocha": "^8.2.0",
+    "chai": "^4.2.0",
+    "copy-webpack-plugin": "^7.0.0",
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.6",
+    "nyc": "^15.1.0",
+    "source-map-support": "^0.5.19",
+    "ts-loader": "^8.0.12",
+    "ts-mocha": "^8.0.0",
+    "typescript": "^4.1.3",
+    "webpack": "^5.10.1",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "test": "mocha 'src/**/*.spec.ts' --reporter min",
+    "tdd-cover": "nyc mocha 'src/**/*.spec.ts' --reporter min",
+    "tdd": "nodemon --ext js,ts,tsx,json,html,css --watch src --watch public --exec \"npm run test --silent && npm run tdd-cover\"",
+    "serve": "webpack serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "mocha": {
+    "require": [
+      "ts-node/register",
+      "source-map-support/register"
+    ]
+  },
+  "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "include": [
+      "src/**.ts*",
+      "src/**.js*"
+    ],
+    "exclude": "**/*.spec.ts*",
+    "cache-dir": "./coverage/cache",
+    "temp-dir": "./coverage/temp",
+    "all": true
+  }
+}

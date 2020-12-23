@@ -1,0 +1,17 @@
+body {
+	background-color: lightgray;
+}
+
+div.app {
+	border: solid 1px black;
+	position: absolute;
+	left: 5px;
+	right: 5px;
+	top: 5px;
+	bottom: 5px;
+	overflow: hidden;
+}
+
+#canvas {
+	background-color: white;
+}
